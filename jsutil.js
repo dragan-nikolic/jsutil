@@ -11,5 +11,6 @@ exports.sleep = function (milliseconds) {
   
 // return timestamp as number of milliseconds since 1970/01/01 
 exports.timestamp = function () {
-  return (new Date()).getTime()
+  const d = new Date()
+  return d.getTime()
 }
