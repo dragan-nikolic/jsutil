@@ -11,11 +11,11 @@ npm install git+ssh://git@github.com:dragan-nikolic/jsutil.git --save
 
 ```js
 (async () => {
-  const { createTempEmailProvider } = require('tempemail')
+  const jsutil = require('jsutil')
 
-  te = createTempEmailProvider('temp_mail')
-  const newEmail = await te.createEmailAddress()
-  console.log('*** newEmail ***', newEmail)
-  te.closeBrowser()
+  const ts = jsutil.timestamp()
+  console.log("Wait 5 sec...")
+  await jsutil.sleep(5000)
+  console.log(jsutil.timestamp() - ts)
 })()
 ```
